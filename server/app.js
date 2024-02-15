@@ -27,7 +27,9 @@ mongoose.connect(process.env.MONGODB).then(()=>{
 });
 
 
-
+app.get('/',(req,res)=>{
+    res.send("Welcome")
+})
 // middleware
 app.use(bodyParser.json())
 app.use(cors())
